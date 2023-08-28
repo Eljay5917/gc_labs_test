@@ -1,0 +1,19 @@
+students={"sam":23,"john":32,"james":41}
+names=["sam","john","james"]
+
+a=list(map(len,names))
+#print(a)
+
+def too_old(x):
+    return x>30
+ages=[22,25,29,34,56,23,12]
+filtered_ages=list(filter(too_old,ages))
+#print(len(filtered_ages))
+#cubes=list(map((lambda x:x%2),item))
+#a=list(map((lambda x:x**2),students.values()))
+#b=dict(zip(students.keys(),a))
+#print(b)
+filtered_students=list(filter((lambda x:x>40),students.values()))
+#print(filtered_students)
+print(dict(zip(students.keys(),filtered_students)))
+
