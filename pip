@@ -17,3 +17,28 @@ filtered_students=list(filter((lambda x:x>40),students.values()))
 #print(filtered_students)
 print(dict(zip(students.keys(),filtered_students)))
 
+#labs week 2 day1
+from functools import reduce
+numbers = [1,56,234,87,4,76,24,69,90,135]
+#def is_even():  
+a=list((filter((lambda number:not(number % 2==0)),numbers)))
+total = reduce(lambda item, running: item+ running, numbers)
+
+def join_string():
+    words = ["hello", "world"]
+    result= reduce(lambda x,y:x+ y, words)
+    print(result)
+# "hello world"
+#list compresions
+#sentence = "the quick brown fox jumps over the lazy dog"
+#words = sentence.split()
+#print([len(word) for word in words])
+#print(len(words))
+#print([len(word) for word in words if word != "the"])
+numbers = [12, 54, 33, 67, 24, 89, 11, 24, 47]
+#[print(number) for number  in numbers if number % 2 == 0 ]
+words = ["hello", "my", "name", "is", "Sam"]
+len_words=[len(word) for word in words]
+print(len_words)
+words_dictionary=dict(zip(words,len_words))
+print(words_dictionary)
